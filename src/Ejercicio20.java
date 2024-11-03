@@ -1,15 +1,16 @@
 import java.util.Scanner;
 
-public class Ejercicio6 {
-    static char[][] sits = {{'O', 'O', 'O', 'O', 'O'},
-                            {'O', 'O', 'O', 'O', 'O'},
-                            {'O', 'O', 'O', 'O', 'O'},
-                            {'O', 'O', 'O', 'O', 'O'},
-                            {'O', 'O', 'O', 'O', 'O'}};
+public class Ejercicio20 {
+    static char[][] sits = {{'O', 'O', 'O', 'O', 'O', 'O'},
+                            {'O', 'O', 'O', 'O', 'O', 'O'},
+                            {'O', 'O', 'O', 'O', 'O', 'O'},
+                            {'O', 'O', 'O', 'O', 'O', 'O'},
+                            {'O', 'O', 'O', 'O', 'O', 'O'},
+                            {'O', 'O', 'O', 'O', 'O', 'O'}};
 
     public static void main(String[] args){
-        //Ejercicio 6
-        System.out.println("Este programa es para reservar asientos en el cine");
+        //Ejercicio 20
+        System.out.println("Este programa es para reservar asientos en un avion");
         System.out.println("O -> silla disponible");
         System.out.println("X -> silla ocupada");
 
@@ -63,13 +64,13 @@ public class Ejercicio6 {
 
     public static void showSits(){
         System.out.println("Estado de las sillas");
-        System.out.println("     1   2   3   4   5");
+        System.out.println("     1   2   3   4   5   6");
         String cadena = "";
         String cadena2 = "";
-        for(int i=0; i < 5; i++){
+        for(int i=0; i < 6; i++){
             cadena= " " + (i+1) + " ";
             cadena2 = "  ";
-            for(int j=0; j < 5; j++){
+            for(int j=0; j < 6; j++){
                 cadena2 += sits[i][j] + "   ";
             }
             System.out.println( cadena + cadena2);

@@ -2,7 +2,7 @@ import java.util.Scanner;
 
 public class Ejercicio11 {
 
-    static final int TAM_ARRAY = 110;
+    static final int TAM_ARRAY = 100;
     static final String[] productos = new String[TAM_ARRAY];
     static final int[] cantidades = new int[TAM_ARRAY];
 

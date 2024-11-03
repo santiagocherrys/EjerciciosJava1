@@ -14,7 +14,7 @@ public class Ejercicio14 {
             while(ciclo) {
                 switch (menu()) {
                     case "1":
-                        //Ingresar estudiante con promedio
+                        //Ingresar empleado
                         String[] empleado ={"Nombre_Empleado", "Puesto_Empleado", "Salario_Empleado"};
                         System.out.println("Ingrese nombre del empleado");
                         empleado[0] = scanner.nextLine();
@@ -22,22 +22,29 @@ public class Ejercicio14 {
                         empleado[1] = scanner.nextLine();
                         System.out.println("Ingrese salario del empleado");
                         empleado[2] = scanner.nextLine();
+                        empleados.add(empleado);
 
                         break;
                     case "2":
                         //Buscar por nombre
-                        System.out.println("Ingrese el nombre del estudiante");
+                        System.out.println("Ingrese el nombre del empleado");
                         String nombre = scanner.nextLine();
-                        for(String[] student : estudiantes){
-                            if(student[0].equals(nombre)){
-                                System.out.println("El promedio de " + nombre + " es: " + student[1]);
+                        boolean flag = false;
+                        for(String[] empleado2 : empleados){
+                            if(empleado2[0].equals(nombre)){
+                                System.out.println("El empleado " + nombre + " tiene puesto de: " + empleado2[1] + " y su salario es: " + empleado2[2]);
+                                flag = true;
                                 break;
                             }
                         }
+                        if(flag){
+                            System.out.println("No hay empleado con ese nombre, recuerde que tiene que introducir el empleado con su nombre exacto");
+                        }
+
                         break;
                     case "3":
                         //Mostrar todos los estudiantes
-                        showEstudiantes();
+                        showEmpleados();
                         break;
                     case "4":
                         //salir
@@ -54,9 +61,9 @@ public class Ejercicio14 {
         public static String menu(){
             System.out.println("--------------------------------------");
             System.out.println("|                 MENU               |");
-            System.out.println("|1. Ingresar estudiante con promedio |");
+            System.out.println("|1. Ingresar empleado                |");
             System.out.println("|2. Buscar por nombre                |");
-            System.out.println("|3. Mostrar estudiantes              |");
+            System.out.println("|3. Mostrar empleados                |");
             System.out.println("|4. Salir                            |");
             System.out.println("--------------------------------------");
 
@@ -67,10 +74,9 @@ public class Ejercicio14 {
 
         }
 
-        public static void showEstudiantes(){
-            for (String[] estudiante : estudiantes){
-                System.out.println("NOMBRE ESTUDIANTE: " + estudiante[0] + " PROMEDIO: " + estudiante[1] );
+        public static void showEmpleados(){
+            for (String[] empleado : empleados){
+                System.out.println("NOMBRE EMPLEADO: " + empleado[0] + " PUESTO EMPLEADO: " + empleado[1] + " SALARIO EMPLEADO: " + empleado[2]);
             }
         }
-    }
 }
